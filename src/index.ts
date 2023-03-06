@@ -21,7 +21,7 @@ export default async function query(options: IRequestOptions) {
   });
 
   const body = Buffer.from(response.body).toString('utf-8');
-  if (response.status !== 200) {
+  if ([200, 201, 204].includes(response.status)) {
     throw new Error(`[S3, ${response.status}] ${body}`);
   }
 
