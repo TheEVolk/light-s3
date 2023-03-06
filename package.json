@@ -1,0 +1,39 @@
+{
+  "name": "light-s3",
+  "license": "MIT",
+  "author": "TheEVolk (https://t.me/theevolk)",
+  "description": "Simple S3 client without aws-sdk",
+  "repository": "github:theevolk/light-s3",
+  "bugs": "https://github.com/theevolk/light-s3/issues",
+  "keywords": [
+    "s3",
+    "lightweight",
+    "amazon"
+  ],
+  "main": "lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.js"
+    }
+  },
+  "engines": {
+    "node": ">=12.20.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.0",
+    "@types/node": "^18.14.6",
+    "rimraf": "^4.1.2",
+    "rollup": "^3.12.0",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "build": "rimraf lib && rollup --config"
+  },
+  "files": [
+    "lib/"
+  ]
+}
