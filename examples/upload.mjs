@@ -21,13 +21,13 @@ const client = {
     return {
       status: response.status,
       body: await response.arrayBuffer()
-    }
+    };
   }
 };
 
 query({
   client,
   method: 'PUT',
-  key: '/file2.txt',
+  key: '/file.txt',
   buffer: Buffer.from([1, 2, 3])
 });
